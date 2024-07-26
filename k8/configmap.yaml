@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: project2-config
 data:
-  DB_HOST: "webapp.cb6oyio086hd.us-west-2.rds.amazonaws.com"
-  DB_NAME: "webapp"
+  RDS_HOST: "webapp.cb6oyio086hd.us-west-2.rds.amazonaws.com"
+  RDS_NAME: "webapp"
 
