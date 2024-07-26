@@ -17,7 +17,7 @@ spec:
       containers:
       - name: my-web-app-container
         image: 637423519309.dkr.ecr.us-west-2.amazonaws.com/webapp:latest
-<<<<<<< HEAD
+
   env:
     - name: DB_HOST
       valueFrom:
@@ -40,9 +40,6 @@ spec:
         secretKeyRef:
           name: project2-secret
           key: DB_PASSWORD
-=======
->>>>>>> f9cb6570c3789a4533495e18702cef3fa40439e0
-
 ---
 
 apiVersion: v1
