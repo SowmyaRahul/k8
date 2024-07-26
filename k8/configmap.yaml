@@ -4,5 +4,5 @@ metadata:
   name: project2-config
 data:
   RDS_HOST: "webapp.cb6oyio086hd.us-west-2.rds.amazonaws.com"
-  RDS_NAME: "webapp"
+  RDS_DB: "webapp"
 
