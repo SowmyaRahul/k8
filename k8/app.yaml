@@ -21,17 +21,17 @@ spec:
         - containerPort : 5002
           protocol : TCP
         env:
-          - name: DB_HOST
+          - name: RDS_HOST
             valueFrom:
               configMapKeyRef:
                 name: project2-config
                 key: RDS_HOST
       
-          - name: RDS_NAME
+          - name: RDS_DB
             valueFrom:
               configMapKeyRef:
                 name: project2-config
-                key: RDS_NAME
+                key: RDS_DB
           - name: RDS_USER
             valueFrom:
               secretKeyRef:
