@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-web-app-project2
+  labels:
+    app: my-web-app-project2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-web-app-project2
+  template:
+    metadata:
+      labels:
+        app: my-web-app-project2
+    spec:
+      containers:
+      - name: my-web-app-container
+        image: 637423519309.dkr.ecr.us-west-
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-web-app-service-project2
+  labels:
+    app: my-web-app-project2
+spec:
+  selector:
+    app: my-web-app-project2
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: LoadBalancer
