@@ -16,7 +16,29 @@ spec:
     spec:
       containers:
       - name: my-web-app-container
-        image: 637423519309.dkr.ecr.us-west-
+        image: 637423519309.dkr.ecr.us-west-2.amazonaws.com/webapp:latest
+  env:
+    - name: DB_HOST
+      valueFrom:
+        configMapKeyRef:
+          name: project2-config
+          key: DB_HOST
+
+    - name: DB_NAME
+      valueFrom:
+        configMapKeyRef:
+          name: project2-config
+          key: DB_NAME
+    - name: DB_USER
+      valueFrom:
+        secretKeyRef:
+          name: project2-secret
+          key: DB_USER
+    - name: DB_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: project2-secret
+          key: DB_PASSWORD
 
 ---
 
@@ -34,3 +56,5 @@ spec:
     port: 80
     targetPort: 80
   type: LoadBalancer
+
+
