@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-web-app-container
-        image: 637423519309.dkr.ecr.us-west-
+        image: 637423519309.dkr.ecr.us-west-2.amazonaws.com/webapp:latest
 
 ---
 
